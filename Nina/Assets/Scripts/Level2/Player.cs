@@ -207,36 +207,36 @@ public class Player : MonoBehaviour {
         soundManager.PlaySFX(SoundManager.SFXType.JUMP);
     }
 
-    private void OnCollisionStay2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Enemy"  && !blinking)
-        {
-            TakeDamage();
-        }
-    }
+    // private void OnCollisionStay2D(Collision2D collision)
+    // {
+    //     if (collision.gameObject.tag == "Enemy"  && !blinking)
+    //     {
+    //         TakeDamage();
+    //     }
+    // }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.tag == "EnemyProjectile" && !blinking)
-        {
-            TakeDamage();
-        }
-    }
+    // private void OnTriggerEnter2D(Collider2D collision)
+    // {
+    //     if (collision.tag == "EnemyProjectile" && !blinking)
+    //     {
+    //         TakeDamage();
+    //     }
+    // }
 
-    private void TakeDamage()
-    {
-        health -= 10f;
+    // private void TakeDamage()
+    // {
+    //     health -= 10f;
 
-        gameObject.layer = LayerMask.NameToLayer("PlayerBlink");
-        blinking = true;
-        if (health <= 0f && OnDied != null)
-        {
-            OnDied(this);
-            this.enabled = false;
-        }
-        else
-            StartCoroutine(EndBlinkingAfterTime(blinkingDuration));
-    }
+    //     gameObject.layer = LayerMask.NameToLayer("PlayerBlink");
+    //     blinking = true;
+    //     if (health <= 0f && OnDied != null)
+    //     {
+    //         OnDied(this);
+    //         this.enabled = false;
+    //     }
+    //     else
+    //         StartCoroutine(EndBlinkingAfterTime(blinkingDuration));
+    // }
 
     IEnumerator EndBlinkingAfterTime(float time)
     {
