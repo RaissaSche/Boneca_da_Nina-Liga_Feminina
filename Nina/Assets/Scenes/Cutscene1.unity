@@ -558,7 +558,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fade: {fileID: 949378453}
   cutsceneManager: {fileID: 1415439912}
-  nextScene: Cutscene2
+  nextScene: Level1
 --- !u!4 &284430059
 Transform:
   m_ObjectHideFlags: 0

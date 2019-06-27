@@ -11,6 +11,7 @@ public class Level2Manager : MonoBehaviour {
     public CustomTrigger2D doorToNextLevel;
     public string sceneToLoad;
     private bool changingScene = false;
+    
     // Use this for initialization
     void Start()
     {
