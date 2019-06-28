@@ -136,8 +136,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 20535807}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 136.98, y: 0.9, z: 0}
-  m_LocalScale: {x: 1.03939, y: 0.8, z: 1}
+  m_LocalPosition: {x: 136.98, y: 4.91, z: 0}
+  m_LocalScale: {x: 1.03939, y: 1.323198, z: 1}
   m_Children: []
   m_Father: {fileID: 1401516493}
   m_RootOrder: 6
@@ -907,6 +907,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9aa22ca123c4e84abad5afa28b08fe8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isJumping: 0
   rb: {fileID: 291206168}
   moveSpeed: 5
   jumpForce: 15
@@ -969,9 +970,9 @@ GameObject:
   - component: {fileID: 293537035}
   - component: {fileID: 293537034}
   - component: {fileID: 293537033}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tiredness Floor
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1624,7 +1625,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 626676436}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 67.75, y: 0.9, z: 0}
+  m_LocalPosition: {x: 67.75, y: 4.91, z: 0}
   m_LocalScale: {x: 1, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 1401516493}
@@ -1670,7 +1671,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 48.6541, y: 24.034948}
+  m_Size: {x: 48.6541, y: 39.753742}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -2023,8 +2024,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 845680275}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 40.97, y: 0.9, z: 0}
-  m_LocalScale: {x: 1.0393946, y: 0.8, z: 1}
+  m_LocalPosition: {x: 40.97, y: 4.91, z: 0}
+  m_LocalScale: {x: 1.0393946, y: 1.323198, z: 1}
   m_Children: []
   m_Father: {fileID: 1401516493}
   m_RootOrder: 1
@@ -2383,8 +2384,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1020687669}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 90.17, y: 0.96, z: 0}
-  m_LocalScale: {x: 1.03939, y: 0.8, z: 1}
+  m_LocalPosition: {x: 90.17, y: 5.01, z: 0}
+  m_LocalScale: {x: 1.03939, y: 1.323198, z: 1}
   m_Children: []
   m_Father: {fileID: 1401516493}
   m_RootOrder: 3
@@ -3076,7 +3077,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1365728404}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 162.03, y: 0.9, z: 0}
+  m_LocalPosition: {x: 162.03, y: 4.91, z: 0}
   m_LocalScale: {x: 1, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 1401516493}
@@ -3122,7 +3123,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 45.30233, y: 24.088438}
+  m_Size: {x: 45.30233, y: 39.842213}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -3186,7 +3187,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1422148006}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 114.95, y: 0.9, z: 0}
+  m_LocalPosition: {x: 114.95, y: 4.91, z: 0}
   m_LocalScale: {x: 1, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 1401516493}
@@ -3232,7 +3233,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 45.946907, y: 24.041447}
+  m_Size: {x: 45.946907, y: 39.764492}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -3627,9 +3628,9 @@ GameObject:
   - component: {fileID: 1679813586}
   - component: {fileID: 1679813585}
   - component: {fileID: 1679813584}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sickness Floor
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4089,9 +4090,9 @@ GameObject:
   - component: {fileID: 1803817680}
   - component: {fileID: 1803817679}
   - component: {fileID: 1803817678}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sadness Floor
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9302,7 +9303,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 49.427593, y: 24.018251}
+  m_Size: {x: 49.427593, y: 39.726128}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -9314,7 +9315,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1970108582}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 13.83, y: 0.9, z: 0}
+  m_LocalPosition: {x: 13.83, y: 4.91, z: 0}
   m_LocalScale: {x: 1, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 1401516493}
@@ -9363,9 +9364,9 @@ GameObject:
   - component: {fileID: 2041801230}
   - component: {fileID: 2041801229}
   - component: {fileID: 2041801228}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Redness Floor
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9733,7 +9734,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2072282182}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.671237, y: 0.6732012, z: -10}
+  m_LocalPosition: {x: -4.4799995, y: -0.83200014, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 91841779}

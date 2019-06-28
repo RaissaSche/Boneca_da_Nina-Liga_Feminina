@@ -9,6 +9,7 @@ public class Player : MonoBehaviour {
     public event Action<Player> OnDied;
 
     private SoundManager soundManager;
+    public bool isJumping = false;
 
     // Movement
     [Header ("Movement Attributes")]
@@ -85,6 +86,13 @@ public class Player : MonoBehaviour {
         }
     }
 
+    private void OnCollisionEnter2D (Collision2D collision)
+    {
+        if(collision.collider.CompareTag("Ground")){
+            isJumping = false;
+        }
+    }
+
     // Update is called once per frame
     private void Update () {
 
@@ -98,7 +106,7 @@ public class Player : MonoBehaviour {
 
         if (Input.GetAxis ("Horizontal") != 0f)
             Move ();
-        if ((Input.GetButtonDown ("Jump") || Input.GetKeyDown (KeyCode.W) || Input.GetKeyDown (KeyCode.UpArrow)))
+        if ((Input.GetButtonDown ("Jump") || Input.GetKeyDown (KeyCode.W) || Input.GetKeyDown (KeyCode.UpArrow)) && !isJumping)
             Jump ();
 
         if (Input.GetMouseButtonDown (0) && canAttack &&
@@ -165,6 +173,7 @@ public class Player : MonoBehaviour {
     }
 
     private void Jump () {
+        isJumping = true;
         rb.AddForce (Vector2.up * jumpForce, ForceMode2D.Impulse);
         soundManager.PlaySFX (SoundManager.SFXType.JUMP);
     }
