@@ -24,7 +24,9 @@ public class SoundManager : MonoBehaviour
     {
         BENSOUND_CUTE,
         SAD_UKULELE_SONG,
+        FOR_A_BONECA_DA_NINA,
         NONE
+        
     }
 
     public enum SFXType
@@ -58,6 +60,7 @@ public class SoundManager : MonoBehaviour
 
         bgmClips.Add(Resources.Load<AudioClip>("Music/BensoundCute"));
         bgmClips.Add(Resources.Load<AudioClip>("Music/SadUkuleleSong"));
+        bgmClips.Add(Resources.Load<AudioClip>("Music/ForABonecadaNina"));
 
         clickClip = Resources.Load<AudioClip>("SFX/ButtonClick");
         jumpClip = Resources.Load<AudioClip>("SFX/Jump");
