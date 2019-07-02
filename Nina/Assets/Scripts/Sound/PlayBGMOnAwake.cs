@@ -7,8 +7,7 @@ public class PlayBGMOnAwake : MonoBehaviour {
     public SoundManager.BGMType bgm;
     public float volume = 1f;
 
-    private void Awake()
-    {
-        SoundManager.instance.PlayBackgroundMusic(bgm, volume);
+    private void Awake () {
+        SoundManager.instance.PlayBackgroundMusic (bgm, volume);
     }
 }

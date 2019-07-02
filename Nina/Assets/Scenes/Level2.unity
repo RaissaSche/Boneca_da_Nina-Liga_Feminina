@@ -3429,6 +3429,48 @@ Prefab:
     - {fileID: 114542701465193126, guid: 37b8f34c76bca7a4a85c005a6527fa86, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 37b8f34c76bca7a4a85c005a6527fa86, type: 2}
   m_IsPrefabParent: 0
+--- !u!1001 &1515269298
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4576883183403826, guid: 0f6bcf3b0d9aed84487fa0010691db36, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -4.38
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576883183403826, guid: 0f6bcf3b0d9aed84487fa0010691db36, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576883183403826, guid: 0f6bcf3b0d9aed84487fa0010691db36, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576883183403826, guid: 0f6bcf3b0d9aed84487fa0010691db36, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576883183403826, guid: 0f6bcf3b0d9aed84487fa0010691db36, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576883183403826, guid: 0f6bcf3b0d9aed84487fa0010691db36, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576883183403826, guid: 0f6bcf3b0d9aed84487fa0010691db36, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576883183403826, guid: 0f6bcf3b0d9aed84487fa0010691db36, type: 2}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 0f6bcf3b0d9aed84487fa0010691db36, type: 2}
+  m_IsPrefabParent: 0
 --- !u!4 &1556406003 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4270462464029784, guid: 6c933f1c9043e8d47bc0730a2a386d06,
@@ -9687,6 +9729,7 @@ GameObject:
   - component: {fileID: 2072282184}
   - component: {fileID: 2072282183}
   - component: {fileID: 2072282187}
+  - component: {fileID: 2072282188}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -9787,6 +9830,17 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: Cinemachine.CinemachineBrain+VcamEvent, Assembly-CSharp, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &2072282188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2072282182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f6060127ae07cd4387025076a86c272, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2074084506
 GameObject:
   m_ObjectHideFlags: 0

@@ -2,19 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Cutscenes
-{
-    public class CameraZoomAction : FloatTweenAction
-    {
+namespace Cutscenes {
+
+    public class CameraZoomAction : FloatTweenAction {
+        
         public Camera target;
 
-        private void Awake()
-        {
+        private void Awake () {
             OnUpdate += TweenUpdated;
         }
 
-        private void TweenUpdated(ICutsceneAction tweenAction, float size)
-        {
+        private void TweenUpdated (ICutsceneAction tweenAction, float size) {
             target.orthographicSize = size;
         }
     }

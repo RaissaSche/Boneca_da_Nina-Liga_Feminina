@@ -1,6 +1,7 @@
 # A Boneca da Nina
 
 PT/BR
+
 "Todos os dias uma mulher é vítima do câncer de mama. Se já é difícil para um adulto receber essa notícia, imagina uma criança.  Nina é uma adorável e bonita menina, que em suas brincadeiras nem imagina a dor que sua mãe está passando. Belíssima ilustração, sensibilidade e criatividade para lidar com um assunto enigmático. 
 E se você fosse a Nina ou a sua mãe, como reagiria?"
 

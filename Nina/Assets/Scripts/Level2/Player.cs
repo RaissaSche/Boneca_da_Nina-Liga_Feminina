@@ -25,7 +25,6 @@ public class Player : MonoBehaviour {
     [Range (1f, 100f)]
     private float jumpForce = 5f;
 
-    // Use this for initialization
     void Start () {
         soundManager = SoundManager.instance;
 
@@ -38,9 +37,7 @@ public class Player : MonoBehaviour {
         }
     }
 
-    // Update is called once per frame
     private void Update () {
-
         float h = Input.GetAxis ("Horizontal");
         if (h >= 0.1f)
             transform.localScale = Vector3.one;

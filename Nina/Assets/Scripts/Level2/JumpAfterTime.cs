@@ -8,18 +8,16 @@ public class JumpAfterTime : MonoBehaviour {
     public Vector2 jumpForce;
     public float timeBetweenJumps;
 
-	// Use this for initialization
-	void Start () {
-        rb = GetComponent<Rigidbody2D>();
+    void Start () {
+        rb = GetComponent<Rigidbody2D> ();
         if (timeBetweenJumps >= 0f)
-            InvokeRepeating("Jump", timeBetweenJumps, timeBetweenJumps);
+            InvokeRepeating ("Jump", timeBetweenJumps, timeBetweenJumps);
         else
-            Jump();
-	}
-	
-    private void Jump()
-    {
-        rb.AddForce(jumpForce, ForceMode2D.Impulse);
-        SoundManager.instance.PlaySFXAtPosition(SoundManager.SFXType.JUMP, transform.position,  0.5f);
+            Jump ();
+    }
+
+    private void Jump () {
+        rb.AddForce (jumpForce, ForceMode2D.Impulse);
+        SoundManager.instance.PlaySFXAtPosition (SoundManager.SFXType.JUMP, transform.position, 0.5f);
     }
 }

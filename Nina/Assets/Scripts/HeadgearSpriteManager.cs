@@ -1,13 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
-public class HeadgearSpriteManager : MonoBehaviour
-{
-    public enum HeadAcessoryType
-    {
+public class HeadgearSpriteManager : MonoBehaviour {
+
+    public enum HeadAcessoryType {
         NOTHING,
         BLUE,
         RED,
@@ -25,13 +24,11 @@ public class HeadgearSpriteManager : MonoBehaviour
 
     private string nextScene;
 
-    // Use this for initialization
     void Start () {
-        fade.FadeIn();
+        fade.FadeIn ();
     }
-	
-	public void ChangeAccessorie(int direction)
-    {
+
+    public void ChangeAccessorie (int direction) {
         accessoryIndex += direction;
 
         if (accessoryIndex < 0)
@@ -44,11 +41,10 @@ public class HeadgearSpriteManager : MonoBehaviour
         if (accessoryImage.sprite)
             accessoryImage.color = Color.white;
         else
-            accessoryImage.color = new Color(1f, 1f, 1f, 0f);
+            accessoryImage.color = new Color (1f, 1f, 1f, 0f);
     }
 
-    public void ChangeBase(int direction)
-    {
+    public void ChangeBase (int direction) {
         baseIndex += direction;
 
         if (baseIndex < 0)
@@ -59,17 +55,15 @@ public class HeadgearSpriteManager : MonoBehaviour
         baseImage.sprite = baseSprites[baseIndex];
     }
 
-    public void OpenScene(string scene)
-    {
+    public void OpenScene (string scene) {
         if (fade.Fading)
             return;
         nextScene = scene;
         fade.OnFadeEnd += ChangeScene;
-        fade.FadeOut(1f, 0.5f);
+        fade.FadeOut (1f, 0.5f);
     }
 
-    private void ChangeScene(CanvasFade obj, bool fadeIn)
-    {
-        SceneManager.LoadScene(nextScene);
+    private void ChangeScene (CanvasFade obj, bool fadeIn) {
+        SceneManager.LoadScene (nextScene);
     }
 }

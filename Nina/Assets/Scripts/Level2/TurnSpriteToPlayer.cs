@@ -2,21 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TurnSpriteToPlayer : MonoBehaviour
-{
+public class TurnSpriteToPlayer : MonoBehaviour {
+
     [SerializeField]
     private SpriteRenderer sprite;
 
     public bool baseSpriteLookingLeft = true;
     public Transform player;
 
-    private void Start()
-    {
+    private void Start () {
         if (player == null)
-            player = GameObject.FindGameObjectWithTag("Player").transform;
+            player = GameObject.FindGameObjectWithTag ("Player").transform;
     }
-    private void Update()
-    {
+    
+    private void Update () {
         if (transform.position.x >= player.position.x)
             sprite.flipX = !baseSpriteLookingLeft;
         else
