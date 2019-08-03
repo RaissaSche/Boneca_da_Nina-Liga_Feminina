@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class IntroSceneManager : MonoBehaviour {
-    
+
     public CanvasFade fade;
     private string nextScene;
 

@@ -32,9 +32,9 @@ public class CanvasFade : MonoBehaviour {
     public float Progress {
         get { return progress; }
     }
-    
+
     private bool fading = false;
-    
+
     public bool Fading {
         get { return fading; }
     }

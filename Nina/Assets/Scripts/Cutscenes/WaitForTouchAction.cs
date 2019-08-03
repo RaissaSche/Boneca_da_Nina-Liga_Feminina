@@ -6,7 +6,7 @@ using UnityEngine;
 namespace Cutscenes {
 
     public class WaitForTouchAction : MonoBehaviour, ICutsceneAction {
-        
+
         public event Action<ICutsceneAction> OnStarted;
         public event Action<ICutsceneAction> OnEnded;
 

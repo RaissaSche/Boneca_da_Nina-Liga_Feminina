@@ -19,7 +19,7 @@ public class BackAndForth : MonoBehaviour {
     }
 
     void Update () {
-        transform.Translate (moveSpeed * Time.deltaTime);
+        transform.Translate (moveSpeeFd * Time.deltaTime);
     }
 
     private void Turn () {

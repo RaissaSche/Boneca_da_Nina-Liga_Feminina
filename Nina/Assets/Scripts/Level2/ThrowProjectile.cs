@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ThrowProjectile : MonoBehaviour {
-    
+
     private GameObject player;
 
     [SerializeField]

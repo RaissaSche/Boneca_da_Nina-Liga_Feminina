@@ -5,7 +5,7 @@ using UnityEngine;
 namespace Cutscenes {
 
     public class CameraZoomAction : FloatTweenAction {
-        
+
         public Camera target;
 
         private void Awake () {

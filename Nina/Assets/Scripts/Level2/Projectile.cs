@@ -4,7 +4,7 @@ using UnityEngine;
 
 [RequireComponent (typeof (Rigidbody2D))]
 public class Projectile : MonoBehaviour {
-    
+
     [SerializeField]
     private float lifeSpan = 3f;
     public Vector2 direction;

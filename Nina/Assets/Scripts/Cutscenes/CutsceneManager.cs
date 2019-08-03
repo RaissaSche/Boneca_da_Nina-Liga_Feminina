@@ -22,7 +22,7 @@ namespace Cutscenes {
         public void Begin () {
             SetupAction (actions[0]);
         }
-        
+
         private void ActionEnded (ICutsceneAction obj) {
             activeIndex++;
             if (activeIndex < actionObjects.Count)

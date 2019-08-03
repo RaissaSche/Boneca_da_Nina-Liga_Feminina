@@ -14,7 +14,7 @@ public class TurnSpriteToPlayer : MonoBehaviour {
         if (player == null)
             player = GameObject.FindGameObjectWithTag ("Player").transform;
     }
-    
+
     private void Update () {
         if (transform.position.x >= player.position.x)
             sprite.flipX = !baseSpriteLookingLeft;

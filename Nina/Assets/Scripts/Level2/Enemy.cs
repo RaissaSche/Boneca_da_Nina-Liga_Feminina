@@ -9,13 +9,13 @@ public class Enemy : MonoBehaviour {
     private bool canBeHit = true;
 
     [SerializeField]
-    [Range(0f, 3f)]
+    [Range (0f, 3f)]
     public float hitCooldown = 2f;
     private Rigidbody2D rb;
 
     [SerializeField]
     private Vector2 pushBackForce;
-    [Range(0f, 3f)]
+    [Range (0f, 3f)]
     public float pushBackCooldown = 1f;
     private bool canBePushed = true;
     [SerializeField]
@@ -26,59 +26,55 @@ public class Enemy : MonoBehaviour {
 
     public bool maxVelocity = true;
 
-
     void Start () {
-        rb = GetComponent<Rigidbody2D>();
-        blink = GetComponent<Blink>();
-	}
-	
+        rb = GetComponent<Rigidbody2D> ();
+        blink = GetComponent<Blink> ();
+    }
 
-	void Update () {
-        if (blink != null){
+    void Update () {
+        if (blink != null) {
             if (canBeHit)
-                blink.StopBlink();
+                blink.StopBlink ();
             else
-                blink.StartBlink();
+                blink.StartBlink ();
         }
-	}
+    }
 
-    private void FixedUpdate() {
+    private void FixedUpdate () {
         if (maxVelocity && rb.velocity.magnitude >= 3f)
             rb.velocity = rb.velocity.normalized * 3f;
     }
 
-    private void OnTriggerEnter2D(Collider2D other) {
-        if (other.gameObject.tag == "PlayerAttack" && canBeHit){
-            Invoke("ResetCanBeHit", hitCooldown);
+    private void OnTriggerEnter2D (Collider2D other) {
+        if (other.gameObject.tag == "PlayerAttack" && canBeHit) {
+            Invoke ("ResetCanBeHit", hitCooldown);
             canBeHit = false;
             health--;
-            SoundManager.instance.PlaySFXAtPosition(SoundManager.SFXType.ENEMY_HIT, transform.position, 0.8f);
-            if (health <= 0){
-                Destroy(gameObject);
+            SoundManager.instance.PlaySFXAtPosition (SoundManager.SFXType.ENEMY_HIT, transform.position, 0.8f);
+            if (health <= 0) {
+                Destroy (gameObject);
                 return;
-            }
-            else if (pushBackForce != Vector2.zero && canBePushed)
-                PushBack(other.transform);
-        }
-        else if (other.gameObject.tag == "PlayerDefense" && canBePushed && pushBackOnDefense){
-            PushBack(other.transform);
+            } else if (pushBackForce != Vector2.zero && canBePushed)
+                PushBack (other.transform);
+        } else if (other.gameObject.tag == "PlayerDefense" && canBePushed && pushBackOnDefense) {
+            PushBack (other.transform);
         }
     }
 
-    private void ResetCanBeHit() {
+    private void ResetCanBeHit () {
         canBeHit = true;
     }
 
-    private void ResetCanBePushed() {
+    private void ResetCanBePushed () {
         canBePushed = true;
     }
 
-    private void PushBack(Transform other) {
+    private void PushBack (Transform other) {
         canBePushed = false;
-        Invoke("ResetCanBePushed", pushBackCooldown);
+        Invoke ("ResetCanBePushed", pushBackCooldown);
         if (transform.position.x >= other.parent.position.x)
-            rb.AddForce(pushBackForce);
+            rb.AddForce (pushBackForce);
         else
-            rb.AddForce(new Vector2(-pushBackForce.x, pushBackForce.y));
+            rb.AddForce (new Vector2 (-pushBackForce.x, pushBackForce.y));
     }
 }

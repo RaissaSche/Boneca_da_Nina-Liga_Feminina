@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CustomCollider2D : MonoBehaviour {
-    
+
     public event Action<CustomCollider2D> OnTouched;
 
     private void OnMouseDown () {

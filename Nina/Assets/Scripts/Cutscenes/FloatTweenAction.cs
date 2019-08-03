@@ -33,7 +33,7 @@ namespace Cutscenes {
                 obj.GetComponent<ICutsceneAction> ().Start ();
             }
         }
-        
+
         private IEnumerator Tween () {
             if (startDelay >= 0.01f)
                 yield return new WaitForSeconds (startDelay);

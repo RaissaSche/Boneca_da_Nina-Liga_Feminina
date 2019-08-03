@@ -11,26 +11,26 @@ public class Player : MonoBehaviour {
     private bool isJumping = false;
 
     // Movement
-    [Header("Moviment Attributes")]
+    [Header ("Moviment Attributes")]
     public Rigidbody2D rb;
     [SerializeField]
-    [Range(0f, 10f)]
+    [Range (0f, 10f)]
     private float moveSpeed = 3f;
     private float speedMultiplier = 1f;
 
     // Jump
-    [Header("Jump")]
+    [Header ("Jump")]
     [SerializeField]
     private bool isGrounded;
     [SerializeField]
-    [Range(1f, 100f)]
+    [Range (1f, 100f)]
     private float jumpForce = 5f;
     public Transform groundCheck;
     public LayerMask groundLayer;
 
     // Attack
-    [Space(10)]
-    [Header("Attack")]
+    [Space (10)]
+    [Header ("Attack")]
     [SerializeField]
     private bool isAttacking;
     private bool canAttack = true;
@@ -38,17 +38,17 @@ public class Player : MonoBehaviour {
     [SerializeField]
     private SpriteRenderer attackSprite;
     [SerializeField]
-    [Range(0f, 2f)]
+    [Range (0f, 2f)]
     private float attackDuration = 1f;
     [SerializeField]
-    [Range(0f, 3f)]
+    [Range (0f, 3f)]
     private float attackCooldown = 1.5f;
     [SerializeField]
     private float attackSpeedMultiplier = 0.5f;
 
     // Defense
-    [Space(10)]
-    [Header("Defense")]
+    [Space (10)]
+    [Header ("Defense")]
     [SerializeField]
     private bool isDefending;
     private CustomTrigger2D defenseTrigger;
@@ -58,8 +58,8 @@ public class Player : MonoBehaviour {
     private float defenseSpeedMultiplier = 0.0f;
 
     // Blinking
-    [Space(10)]
-    [Header("Blinking")]
+    [Space (10)]
+    [Header ("Blinking")]
     [SerializeField]
     private bool blinking = false;
     private float blinkingDuration = 1f;
@@ -71,21 +71,21 @@ public class Player : MonoBehaviour {
     void Start () {
         soundManager = SoundManager.instance;
 
-        rb = GetComponent<Rigidbody2D>();
-        anim = GetComponent<Animator>();
-        sprite = GetComponent<SpriteRenderer>();
-        blink = GetComponent<Blink>();
-        attackTrigger = transform.Find("AttackTrigger").
-            GetComponentInChildren<CustomTrigger2D>();
-        defenseTrigger = transform.Find("DefenseTrigger").
-            GetComponentInChildren<CustomTrigger2D>();
+        rb = GetComponent<Rigidbody2D> ();
+        anim = GetComponent<Animator> ();
+        sprite = GetComponent<SpriteRenderer> ();
+        blink = GetComponent<Blink> ();
+        attackTrigger = transform.Find ("AttackTrigger").
+        GetComponentInChildren<CustomTrigger2D> ();
+        defenseTrigger = transform.Find ("DefenseTrigger").
+        GetComponentInChildren<CustomTrigger2D> ();
         defenseTrigger.OnCustomTriggerEnter2D += OnDefenseTrigger;
     }
 
-    private void OnDefenseTrigger(Collider2D obj) {
-        if(obj.gameObject.tag == "EnemyProjectile"){
-            soundManager.PlaySFX(SoundManager.SFXType.DEFEND);
-            Destroy(obj.gameObject);
+    private void OnDefenseTrigger (Collider2D obj) {
+        if (obj.gameObject.tag == "EnemyProjectile") {
+            soundManager.PlaySFX (SoundManager.SFXType.DEFEND);
+            Destroy (obj.gameObject);
         }
     }
 
@@ -112,28 +112,26 @@ public class Player : MonoBehaviour {
         if (Input.GetMouseButtonDown (0)) {
             Move ();
         }
-        if (Input.GetMouseButtonUp(1) && isDefending){
-            EnableDefense(false);
+        if (Input.GetMouseButtonUp (1) && isDefending) {
+            EnableDefense (false);
         }
 
-          if (Input.GetMouseButtonDown(0) && canAttack && 
-            !isAttacking && !isDefending){
+        if (Input.GetMouseButtonDown (0) && canAttack &&
+            !isAttacking && !isDefending) {
             canAttack = false;
-            EnableAttack(true);
-            Invoke("StopAttack", attackDuration);
-            Invoke("ResetCanAttack", attackCooldown);
-            soundManager.PlaySFX(SoundManager.SFXType.PLAYER_ATTACK, 0.5f);
-        }
-        else if (Input.GetMouseButtonDown(1) && !isAttacking && !isDefending){
-            EnableDefense(true);
+            EnableAttack (true);
+            Invoke ("StopAttack", attackDuration);
+            Invoke ("ResetCanAttack", attackCooldown);
+            soundManager.PlaySFX (SoundManager.SFXType.PLAYER_ATTACK, 0.5f);
+        } else if (Input.GetMouseButtonDown (1) && !isAttacking && !isDefending) {
+            EnableDefense (true);
         }
 
-        if (blinking){
-            blink.StartBlink();
+        if (blinking) {
+            blink.StartBlink ();
+        } else {
+            blink.StopBlink ();
         }
-        else{
-            blink.StopBlink();
-        }   
     }
 
     private void Move () {
@@ -148,33 +146,33 @@ public class Player : MonoBehaviour {
         return moveSpeed;
     }
 
-    private void StopAttack() {
-        EnableAttack(false);
+    private void StopAttack () {
+        EnableAttack (false);
     }
 
-    private void ResetCanAttack() {
+    private void ResetCanAttack () {
         canAttack = true;
     }
 
-    private void EnableAttack(bool enable) {
+    private void EnableAttack (bool enable) {
         isAttacking = enable;
         attackTrigger.trigger.enabled = enable;
         attackSprite.enabled = enable;
-        anim.SetBool("Attacking", enable);
+        anim.SetBool ("Attacking", enable);
     }
 
-    private void StopDefense() {
-        EnableDefense(false);
+    private void StopDefense () {
+        EnableDefense (false);
     }
 
-    private void EnableDefense(bool enable) {
+    private void EnableDefense (bool enable) {
         isDefending = enable;
         defenseTrigger.trigger.enabled = enable;
         defenseSprite.enabled = enable;
-        anim.SetBool("Defending", enable);
+        anim.SetBool ("Defending", enable);
     }
 
-    private void UpdateSpeedMultiplier() {
+    private void UpdateSpeedMultiplier () {
         speedMultiplier = 1f;
         if (isAttacking)
             speedMultiplier *= attackSpeedMultiplier;
@@ -188,30 +186,28 @@ public class Player : MonoBehaviour {
         soundManager.PlaySFX (SoundManager.SFXType.JUMP);
     }
 
-      private void OnCollisionStay2D(Collision2D collision) {
-        if (collision.gameObject.tag == "Enemy"  && !blinking)
-        {
-            TakeDamage();
+    private void OnCollisionStay2D (Collision2D collision) {
+        if (collision.gameObject.tag == "Enemy" && !blinking) {
+            TakeDamage ();
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision) {
-        if (collision.tag == "EnemyProjectile" && !blinking)
-        {
-            TakeDamage();
+    private void OnTriggerEnter2D (Collider2D collision) {
+        if (collision.tag == "EnemyProjectile" && !blinking) {
+            TakeDamage ();
         }
     }
 
-    private void TakeDamage() {
+    private void TakeDamage () {
 
-        gameObject.layer = LayerMask.NameToLayer("PlayerBlink");
+        gameObject.layer = LayerMask.NameToLayer ("PlayerBlink");
         blinking = true;
-            StartCoroutine(EndBlinkingAfterTime(blinkingDuration));
+        StartCoroutine (EndBlinkingAfterTime (blinkingDuration));
     }
 
-    IEnumerator EndBlinkingAfterTime(float time) {
-        yield return new WaitForSeconds(time);
+    IEnumerator EndBlinkingAfterTime (float time) {
+        yield return new WaitForSeconds (time);
         blinking = false;
-        gameObject.layer = LayerMask.NameToLayer("Player");
+        gameObject.layer = LayerMask.NameToLayer ("Player");
     }
 }

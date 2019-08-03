@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class SceneHack : MonoBehaviour {
-    
+
     public static SceneHack instance;
 
     void Start () {
