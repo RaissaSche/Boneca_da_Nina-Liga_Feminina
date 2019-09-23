@@ -13,7 +13,7 @@ English
 
 Nina's Doll
 
-"Everyday there's a new cancer victim. If it's difficult news to receive for an adult, imagine if you're a child. Nina is an adorable and beautiful girl, that in her playtime doesn't even imagine the pain that her mother is going through. This piece deals with an enigmatic subject with stunning illustrations, sensibility and creativity.
+"There's a new cancer victim everyday. If it's already a difficult new reality to handles as an adult, imagine if you're a child. Nina is an adorable and beautiful girl, that in her playtime doesn't even imagine the pain that her mother is going through. This project deals with an enigmatic subject with stunning illustrations, sensibility and creativity.
 And if you were Nina or her mom, how would you react?"
 
 Project developed by me, Raissa Scheeren, and Gabriel F. Silva. It occurred from an parterneship between Liga do Combate ao Câncer de Canoas (Canoas Cancer Combat League) and the Game Development course in Unisinos University. The objective was to talk about cancer, a topic considered taboo by most. However, it's when we face the hard matters that we become better.
