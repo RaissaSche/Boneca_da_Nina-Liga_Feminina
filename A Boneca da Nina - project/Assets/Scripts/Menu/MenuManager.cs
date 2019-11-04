@@ -34,6 +34,10 @@ public class MenuManager : MonoBehaviour {
         Application.Quit ();
     }
 
+    public void LoadDressUp () {
+        SceneManager.LoadScene ("DressUp");
+    }
+
     private void ChangeScene (CanvasFade obj, bool fadeIn) {
         SceneManager.LoadScene (nextScene);
     }
