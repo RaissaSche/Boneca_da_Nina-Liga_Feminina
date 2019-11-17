@@ -6,24 +6,57 @@ using UnityEngine.UI;
 public class PlayerBoat : MonoBehaviour {
 	
 	public float offset = 0f;
-	private Vector3 initialPosition;
+	public float speed = 20;
+
+	private Vector3 destination;
+	private float step;
+	private float speedX = 10;
+
+	private bool inBossPlace = false;
+
+	GameObject bt;
+
+	void Start() {
+		bt = GameObject.Find ("SkipButton");
+		bt.SetActive (false);
+	}
 
 	public void ClickUp() {
-		Debug.Log ("ClickUp");
-		if (transform.position.y < initialPosition.y + offset) {
-			transform.localPosition += new Vector3(0, offset);
-		}
+		if (destination.y <= 0)
+			destination += new Vector3 (0, offset);
 	}
 
 	public void ClickDown() {
-		Debug.Log ("ClickDown " + (initialPosition.y - offset).ToString());
-		if (transform.position.y > initialPosition.y - offset) {
-			transform.localPosition -= new Vector3(0, offset);
-		}
+		if (destination.y >= 0)
+			destination -= new Vector3 (0, offset);		
 	}
 
-	void Update () {
+	void Update() {
 
-	
+		if (inBossPlace) {
+
+			return;
+		}
+
+		transform.localPosition += new Vector3(speedX * Time.deltaTime, 0);
+		destination.x = transform.localPosition.x;
+		transform.localPosition = Vector3.MoveTowards(transform.localPosition, destination, speed * Time.deltaTime);
+	}
+
+	void OnCollisionEnter2D(Collision2D other) {
+		if (other.gameObject.tag == "Log")
+			speedX = 2;
+	}
+
+	void OnCollisionExit2D(Collision2D other) {
+		if (other.gameObject.tag == "Log")
+		 	speedX = 10;
+	}
+
+	void OnTriggerEnter2D(Collider2D other) {
+		inBossPlace = other.gameObject.name == "BossPlace";
+
+		bt.SetActive(true);
+			
 	}
 }
