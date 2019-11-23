@@ -116,7 +116,7 @@ MonoBehaviour:
   status: 0
   projectile: {fileID: 7794234168894448722, guid: 8e2920793f8d4b8439c11e01e8ab50a3,
     type: 3}
-  shootRecharge: 0
+  moveSpeed: {x: -2, y: 0}
 --- !u!114 &114901407604949074
 MonoBehaviour:
   m_ObjectHideFlags: 0

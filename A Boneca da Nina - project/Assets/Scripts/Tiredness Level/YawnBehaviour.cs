@@ -33,11 +33,7 @@ public class YawnBehaviour : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if(col.gameObject.tag == "Player")
-        {
-
-            Destroy(gameObject);
-        }
+        Debug.Log(col.gameObject.tag);
         if(col.gameObject.tag != "Enemy")
         {
             Destroy(gameObject);
