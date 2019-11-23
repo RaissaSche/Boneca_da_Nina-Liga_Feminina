@@ -29,5 +29,7 @@ public class BoatSlider : MonoBehaviour
     {
         float playerPos = player.transform.position.x - initialPos.x;
         slider.value = playerPos / endPos.x;
+        if (slider.value >= 1)
+        gameObject.SetActive(false);
     }
 }
