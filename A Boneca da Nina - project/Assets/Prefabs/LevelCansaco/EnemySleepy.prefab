@@ -79,7 +79,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 7
+  m_Radius: 8
 --- !u!50 &50734549573060982
 Rigidbody2D:
   serializedVersion: 4
@@ -114,6 +114,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   status: 0
+  projectile: {fileID: 7794234168894448722, guid: 8e2920793f8d4b8439c11e01e8ab50a3,
+    type: 3}
+  shootRecharge: 0
 --- !u!114 &114901407604949074
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -146,7 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: {x: -2, y: 0}
-  movementDuration: 2
+  movementDuration: 0
   flip: 1
 --- !u!114 &114801539596911890
 MonoBehaviour:
@@ -223,6 +226,7 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
