@@ -13,8 +13,10 @@ public class PlayerBoat : MonoBehaviour {
 	private float speedX = 10;
 
 	private bool inBossPlace = false;
+    private bool collided = false;
+    private bool returning = false;
 
-	GameObject bt;
+    GameObject bt;
 
 	void Start() {
 		bt = GameObject.Find ("SkipButton");
@@ -32,31 +34,35 @@ public class PlayerBoat : MonoBehaviour {
 	}
 
 	void Update() {
+		if (inBossPlace) return;  
 
-		if (inBossPlace) {
+        transform.localPosition += new Vector3(speedX * Time.deltaTime, 0);
 
-			return;
-		}
+        if (!collided)
+        {
+            destination.x = transform.localPosition.x;
+        } else if(!returning)
+        {
+            destination.x -= 3;
+            returning = true;
+        }
 
-		transform.localPosition += new Vector3(speedX * Time.deltaTime, 0);
-		destination.x = transform.localPosition.x;
 		transform.localPosition = Vector3.MoveTowards(transform.localPosition, destination, speed * Time.deltaTime);
-	}
 
-	void OnCollisionEnter2D(Collision2D other) {
-		if (other.gameObject.tag == "Log")
-			speedX = 2;
-	}
-
-	void OnCollisionExit2D(Collision2D other) {
-		if (other.gameObject.tag == "Log")
-		 	speedX = 10;
+        if (destination.x == transform.localPosition.x)
+        {
+            collided = false;
+            returning = false;
+        }
 	}
 
 	void OnTriggerEnter2D(Collider2D other) {
 		inBossPlace = other.gameObject.name == "BossPlace";
 
-		bt.SetActive(true);
-			
-	}
+        if (inBossPlace)
+		    bt.SetActive(true);
+
+        if (other.gameObject.tag == "Log")
+            collided = true;
+    }
 }
