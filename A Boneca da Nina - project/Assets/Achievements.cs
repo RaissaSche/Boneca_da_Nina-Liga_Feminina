@@ -4,15 +4,38 @@ using UnityEngine;
 
 public class Achievements : MonoBehaviour
 {
-    // Start is called before the first frame update
+
+    public GameObject failNeverCollided;
+    public GameObject successNeverCollided;
+    public GameObject failSmiled;
+    public GameObject successSmiled;
+
+    private GameObject player;
+
+    private GameObject termometro;
+
+    private bool neverCollided;
+    private bool smiled;
+
     void Start()
     {
-        
+        player = GameObject.Find("PaperBoat");
+        termometro = GameObject.Find("Canvas");
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        neverCollided = player.GetComponent<PlayerBoat>().neverCollided;
+        smiled = termometro.GetComponent<Cocegas>().smiled;
+
+        Debug.Log("neverCollided " + neverCollided);
+        Debug.Log("smiled " + smiled);
+
+        successNeverCollided.SetActive(neverCollided);
+        failNeverCollided.SetActive(!neverCollided);
+
+        successSmiled.SetActive(smiled);
+        failSmiled.SetActive(!smiled);
+
     }
 }

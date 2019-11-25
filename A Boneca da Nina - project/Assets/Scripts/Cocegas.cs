@@ -31,6 +31,8 @@ public class Cocegas : MonoBehaviour, IPointerClickHandler {
 
 	private GameObject achievements;
 
+	public bool smiled  = false;
+
 	void Start () {
 		particle = GameObject.Find("SadnessParticle").GetComponent<ParticleSystem>();	
 
@@ -50,6 +52,8 @@ public class Cocegas : MonoBehaviour, IPointerClickHandler {
 
 			if (status == Status.Lost || status == Status.Won) {
 				achievements.SetActive(true);
+
+				smiled = (status == Status.Won);
 			}
 
 			return;

@@ -16,6 +16,8 @@ public class PlayerBoat : MonoBehaviour {
     private bool collided = false;
     private bool returning = false;
 
+	public bool neverCollided = true;
+
     GameObject bt;
 
 	void Start() {
@@ -62,7 +64,9 @@ public class PlayerBoat : MonoBehaviour {
         if (inBossPlace)
 		    bt.SetActive(true);
 
-        if (other.gameObject.tag == "Log")
+        if (other.gameObject.tag == "Log"){
             collided = true;
+			neverCollided = false;
+		}
     }
 }

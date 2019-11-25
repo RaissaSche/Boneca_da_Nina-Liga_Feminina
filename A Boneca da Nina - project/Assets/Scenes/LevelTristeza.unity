@@ -621,6 +621,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   offset: 5
   speed: 20
+  neverCollided: 1
 --- !u!1001 &306322800
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1568,6 +1569,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd8f0846428d0ab4cbd73e91507c7c56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  failNeverCollided: {fileID: 1788532850}
+  successNeverCollided: {fileID: 1681891206}
+  failSmiled: {fileID: 670661362}
+  successSmiled: {fileID: 634965683}
 --- !u!1001 &578751191
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1923,6 +1928,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   termometro: {fileID: 1085452151}
+  smiled: 0
 --- !u!1 &699613248
 GameObject:
   m_ObjectHideFlags: 0
@@ -2004,7 +2010,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 699613251}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 772398019}
+        m_MethodName: OpenScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: LevelTristeza
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &699613251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9291,7 +9308,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Level1
+          m_StringArgument: Cutscene4
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1690944419
