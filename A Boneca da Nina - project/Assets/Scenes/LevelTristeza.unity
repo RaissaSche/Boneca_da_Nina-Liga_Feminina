@@ -700,7 +700,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 133}
+  m_AnchoredPosition: {x: 0, y: 110}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &346106016
@@ -1201,7 +1201,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 500837223}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 14.146557, y: 11.720531, z: -37.968754}
+  m_LocalPosition: {x: 14.146294, y: 11.720531, z: -37.968754}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1668633097}
@@ -1488,6 +1488,7 @@ GameObject:
   - component: {fileID: 575249859}
   - component: {fileID: 575249861}
   - component: {fileID: 575249860}
+  - component: {fileID: 575249862}
   m_Layer: 5
   m_Name: Achievements
   m_TagString: Untagged
@@ -1516,7 +1517,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -5.7, y: 5.1}
+  m_AnchoredPosition: {x: -5.700012, y: 5.100006}
   m_SizeDelta: {x: -177.2, y: -68.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &575249860
@@ -1555,6 +1556,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 575249858}
   m_CullTransparentMesh: 0
+--- !u!114 &575249862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 575249858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd8f0846428d0ab4cbd73e91507c7c56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &578751191
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1657,7 +1670,7 @@ GameObject:
   - component: {fileID: 634965686}
   - component: {fileID: 634965685}
   m_Layer: 5
-  m_Name: Image (1)
+  m_Name: Sucess
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1730,7 +1743,7 @@ GameObject:
   - component: {fileID: 670661365}
   - component: {fileID: 670661364}
   m_Layer: 5
-  m_Name: Image (2)
+  m_Name: Fail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1946,7 +1959,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -96, y: -126}
+  m_AnchoredPosition: {x: -92, y: -108}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &699613250
@@ -8122,7 +8135,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1373484033}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 14.146557, y: 11.720531, z: -37.968754}
+  m_LocalPosition: {x: 14.146294, y: 11.720531, z: -37.968754}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1525809034}
@@ -9127,7 +9140,7 @@ GameObject:
   - component: {fileID: 1681891209}
   - component: {fileID: 1681891208}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Success
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9224,7 +9237,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 98, y: -126}
+  m_AnchoredPosition: {x: 100, y: -108}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1690944418
@@ -9604,7 +9617,7 @@ GameObject:
   - component: {fileID: 1788532853}
   - component: {fileID: 1788532852}
   m_Layer: 5
-  m_Name: Image (1)
+  m_Name: Fail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15427,7 +15440,7 @@ GameObject:
   - component: {fileID: 2121826287}
   - component: {fileID: 2121826286}
   m_Layer: 5
-  m_Name: Image
+  m_Name: ConquistaSorriso
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15442,7 +15455,7 @@ RectTransform:
   m_GameObject: {fileID: 2121826284}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_Children:
   - {fileID: 72666521}
   - {fileID: 1487063688}
@@ -15453,7 +15466,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -156, y: -32}
+  m_AnchoredPosition: {x: -130, y: -30}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2121826286
@@ -15504,7 +15517,7 @@ GameObject:
   - component: {fileID: 2122276099}
   - component: {fileID: 2122276098}
   m_Layer: 5
-  m_Name: Image
+  m_Name: ConquistaColisao
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15519,7 +15532,7 @@ RectTransform:
   m_GameObject: {fileID: 2122276096}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_Children:
   - {fileID: 389184747}
   - {fileID: 1681891207}
@@ -15529,7 +15542,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -156, y: 75}
+  m_AnchoredPosition: {x: -130, y: 60}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2122276098
